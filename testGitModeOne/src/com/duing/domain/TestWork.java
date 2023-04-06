@@ -13,5 +13,7 @@ public class TestWork {
         System.out.println("helloBranchMaster");
         //我是branchB添加的
         System.out.println("helloBranchB");
+        //我是branchB添加的
+        System.out.println("helloBranchB");
     }
 }
