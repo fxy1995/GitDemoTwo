@@ -8,5 +8,6 @@ package com.duing.domain;
 public class Test {
     public static void main(String[] args) {
         System.out.println("hello");
+        System.out.println("哈啊哈哈");
     }
 }
