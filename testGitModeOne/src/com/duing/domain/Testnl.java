@@ -7,4 +7,5 @@ package com.duing.domain;
  */
 public class Testnl {
     private int id;
+    private String name;
 }
