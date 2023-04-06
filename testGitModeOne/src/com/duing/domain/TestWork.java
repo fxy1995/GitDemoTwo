@@ -1,5 +1,7 @@
 package com.duing.domain;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 /**
  * @Author 付雪缘
  * @Date 2023/4/6 13:30
@@ -15,5 +17,6 @@ public class TestWork {
         System.out.println("helloBranchB");
         //我是branchB添加的
         System.out.println("helloBranchB");
+        System.out.println("hello你好呀master");
     }
 }
