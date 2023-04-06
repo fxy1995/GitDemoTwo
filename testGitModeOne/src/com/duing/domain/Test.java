@@ -6,7 +6,7 @@ package com.duing.domain;
  * @Version 1.0
  */
 public class Test {
-    public static void main(String[] args) {
+    public static恶气额为全额企鹅企鹅企鹅恶气 void main(String[] args) {
         System.out.println("hello");
         System.out.println("哈啊哈哈");
         System.out.println("hellohello666666");
