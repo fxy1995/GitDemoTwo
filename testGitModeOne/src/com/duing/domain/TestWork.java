@@ -18,5 +18,6 @@ public class TestWork {
         //我是branchB添加的
         System.out.println("helloBranchB");
         System.out.println("hello你好呀master");
+        System.out.println("test2");
     }
 }
