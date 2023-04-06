@@ -9,5 +9,7 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("hello");
         System.out.println("哈啊哈哈");
+        //我是A分支添加的
+        System.out.println("helloBranchA");
     }
 }
