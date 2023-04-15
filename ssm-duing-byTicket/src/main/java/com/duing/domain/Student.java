@@ -1,11 +1,15 @@
 package com.duing.domain;
 
+import java.io.Serializable;
+
 /**
  * @Author 付雪缘
  * @Date 2023/4/8 21:01
  * @Version 1.0
  */
-public class Student {
+public class Student  implements Serializable {
+
+    private static final long serialVersionUID = 4724114844926445745L;
     private int id;
     private String name;
 
@@ -19,6 +23,7 @@ public class Student {
     }
 
     public Student(int id, String name, int age) {
+
         this.id = id;
         this.name = name;
         this.age = age;

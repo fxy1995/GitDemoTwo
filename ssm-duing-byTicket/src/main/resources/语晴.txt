@@ -1,0 +1,37 @@
+http://git.com/hellocherise/ssm-duing-bug-ticket.git
+mybatisGenerator  是mybatis通过数据库表结构自动生成
+service层的接口层是为了controller调用时使用service的多态-更加灵活的保证service的不同实现更灵活
+配置文件名全部小写---git不会识别文件名大小写-如果我们之前文件名创建错了-并且提交到了git那么我们要修改文件名时-需要把文件删了创建新文件即可
+web.xml中版本        jdk    tomcat
+2.4                  1.4     5.5
+2.5                  5.0     6.0
+3.0                  6.0     7.0
+3.1                  7.0     8.0
+4.0                  8.0     9.0
+可以向下兼容 ，不能向上兼容
+即如果我们使用2.4版本的web.xml 我们可以使用 jdk7.0  tomcat 9.0
+数据库表设计
+关于数据库字段与domain字段映射关系
+如 数据库字段为 film_id  domain为 film_id  mybatis会自动映射
+           如果 domain中为 驼峰式命名 mybatis如何映射？？
+domain表需要是实现序列化接口  implements Serializable
+      并且生成一个序列化ID  private static final long serialVersionUID
+mybatis mapper文件的相关问题  sql中#{key}带数数据类型     ${key}原样输出
+如果遇到sql语句中有关键字 哪么我们用键盘阿拉伯数字1左边的那么键的符号引起来
+关于vo与domain  vo与domain的转换可以用beansUtil类来快速实现
+vo对象也是为了不暴露数据库字段-避免数据库逻辑暴露出现危险
+vo 对应视图需要的数据  filmvo  名字 图片 导演  filmdetailvo导演主演片长类型国家简介
+domain 对应数据库表字段
+我们dao层返回domain  service层解析domain 装入vo中 返回给controller
+影片表 film
+id  主键 long(bigint)--此字段唯一自增-于业务无关
+film_id  电影的id String(varchar)
+name        名字    varchar
+director    导演
+player      主演
+type        类型
+country     制片国家         varchar
+synopsis    剧情介绍         varchar
+length      片长(单位:分钟)  int
+play_time    上映时间        date
+img_path      海报地址       varchar(如果海报有很多，就会搭建一个远程的专门的服务器用来存海报)

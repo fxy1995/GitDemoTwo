@@ -2,13 +2,13 @@ package com.duing.controller;
 
 import com.duing.domain.Student;
 import com.duing.service.StudentService;
-import com.duing.service.StudentServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * @Author 付雪缘
@@ -23,5 +23,9 @@ public class StudentController {
     @ResponseBody
     public List<Student> selectList(){
         return serviceimpl.selectList();
+    }
+    @RequestMapping("test11")
+    public String test1(){
+        return "helo";
     }
 }

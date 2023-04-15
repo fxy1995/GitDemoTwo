@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duing.dao.FilmMapper">
+    <select id="findAll" resultType="com.duing.domain.Film">
+        SELECT ID,FILM_ID,`NAME`,DIRECTOR,PLAYER,TYPE,COUNTRY,SYNOPSIS,LENGTH,PLAY_TIME,IMG_PATH
+         FROM FILM
+    </select>
+</mapper>

@@ -17,6 +17,13 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
+<!--    为什么这里要拦截/而不是/*-->
+<!--    因为/*表示拦截所欲请求 一帮用于过滤器-->
+<!--    /的优先级在最后当*.jsp或其他都无法匹配时才会拦截&#45;&#45;又因为我们只拦截controller层所以不拦截静态资源-->
+<!--  但是/会拦截除.jsp和.jspx外所有请求 所以js和css也会被/拦截但是我们不拦截css和js
+     所以需要额外配置
+
+ -->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 

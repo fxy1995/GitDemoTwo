@@ -1,7 +1,8 @@
-package com.duing.service;
+package com.duing.service.impl;
 
 import com.duing.dao.StudentDao;
 import com.duing.domain.Student;
+import com.duing.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
