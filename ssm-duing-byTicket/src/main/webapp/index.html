@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery.js"></script>
+<body>
+<script type="text/javascript">
+    $().ready(function(){
+        $("#btn").click(function () {
+  var fileItem=$(" <input type=\"file\" name=\"hello\" >");
+            $("#fileForm").prepend(fileItem);
+        })
+    })
+</script>
+<input type="button" id="btn" value="添加文件"></input>
+<form id="fileForm" action="fileUpload" method="post" enctype="multipart/form-data">
+
+<input type="submit" value="提交">
+</form>
+<a href="fileDownload?fileName=mvn必知必会-老师版.txt">mvn必知必会-老师版.txt</a>
+</body>
+</html>

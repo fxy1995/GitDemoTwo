@@ -13,11 +13,24 @@
     <context:component-scan base-package="com.duing.controller"></context:component-scan>
     <!--    配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--       相当于我们系统内部重定向或者转发时会进行路径的拼接-->
+<!--        如return jsp/test-->
+<!--        就会拼接成/WEB-INF/jsp/test.jsp-->
         <property name="prefix" value="/WEB-INF/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
 <!--    配置静态资源解析器-->
+<!--    当我们前端页面访问静态资源时如果url中含有/img/ 系统就会去img下找资源-->
     <mvc:resources mapping="/img/**" location="/img/"></mvc:resources>
     <mvc:resources mapping="/css/**" location="/css/"></mvc:resources>
     <mvc:resources mapping="/js/**" location="/js/"></mvc:resources>
+    <mvc:resources mapping="/index.html" location="/"></mvc:resources>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean  class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8"></constructor-arg>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 </beans>

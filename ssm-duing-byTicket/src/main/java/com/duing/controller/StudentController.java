@@ -25,7 +25,8 @@ public class StudentController {
         return serviceimpl.selectList();
     }
     @RequestMapping("test11")
+    @ResponseBody
     public String test1(){
-        return "helo";
+        return "你好吗";
     }
 }

@@ -1,5 +1,13 @@
 http://git.com/hellocherise/ssm-duing-bug-ticket.git
 mybatisGenerator  是mybatis通过数据库表结构自动生成
+
+room的座位信息是通过前端传来的二维数组（n行n列）列表我们转成json格式存入数据库中的
+不同的座位有不同的标识
+如
+不可选中的座位：如屏幕前三排  用-2标识 即数组中对应位置的值为-2前端遍历时进行对应的渲染
+没有座位用-1标识  可选座位用0标识以卖出的座位用1标识
+
+详情看RoomController中insert接口
 service层的接口层是为了controller调用时使用service的多态-更加灵活的保证service的不同实现更灵活
 配置文件名全部小写---git不会识别文件名大小写-如果我们之前文件名创建错了-并且提交到了git那么我们要修改文件名时-需要把文件删了创建新文件即可
 web.xml中版本        jdk    tomcat
